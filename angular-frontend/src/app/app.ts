@@ -1,13 +1,15 @@
 import { Component, signal, AfterViewInit } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
-import { Sidebar } from './sidebar/sidebar';
+import { RouterOutlet } from '@angular/router';
+import { PublicModule } from './public/public-module';
+import { SecureModule } from './secure/secure-module';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Sidebar],
+  imports: [RouterOutlet, SecureModule, PublicModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App implements AfterViewInit {
   protected readonly title = signal('angular-admin1');
