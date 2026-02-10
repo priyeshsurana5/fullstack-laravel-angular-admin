@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Login } from './login/login';
 import { Register } from './register/register';
 import { Public } from './public';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,8 @@ import { Public } from './public';
     CommonModule,
     Login,
     Register,
-    Public
+    Public,
+    FormsModule
   ]
 })
 export class PublicModule { }
