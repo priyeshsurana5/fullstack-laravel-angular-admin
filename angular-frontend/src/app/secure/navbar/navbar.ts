@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css'],
 })
-export class Navbar {}
+export class Navbar {
+
+  toggleSidebar() {
+  document.body.classList.toggle('sidebar-collapse');
+}
+}
