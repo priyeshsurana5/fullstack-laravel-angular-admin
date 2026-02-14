@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Login } from './login/login';
 import { Register } from './register/register';
 import { Public } from './public';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     Login,
     Register,
     Public,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PublicModule { }

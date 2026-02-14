@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Auth } from '../../services/auth';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './register.css',
 })
 export class Register implements OnInit {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private auth: Auth) { }
   firstName: string = '';
   lastName: string = '';
   email: string = '';
@@ -24,7 +25,7 @@ export class Register implements OnInit {
     console.log('Last Name:', this.lastName);
     console.log('Email:', this.email);
     console.log('Password:', this.password);
-    this.http.post('http://localhost:8000/api/register', {
+    this.auth.register({
       first_name: this.firstName,
       last_name: this.lastName,
       email: this.email,    

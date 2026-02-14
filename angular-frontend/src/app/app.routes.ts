@@ -6,5 +6,5 @@ import { Secure } from './secure/secure';
 export const routes: Routes = [
   { path: 'register', component: Register },
   { path: 'login', component: Login },
-  { path: '', component: Secure },
+  { path: 'dashboard', component: Secure },
 ];
